@@ -6,16 +6,17 @@ module.exports = {
   entry: { bundle: path.resolve(__dirname, "../src/index.tsx") },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "js/[name][contenthash].js",
+    filename: "js/main[name][contenthash].js",
     clean: true,
     assetModuleFilename: "[name][ext]",
+    publicPath: "./",
   },
   devtool: "source-map", // helps to debug in chrome in sources tab
   devServer: {
     static: {
       directory: path.resolve(__dirname, "../dist"),
     },
-    port: 3001,
+    port: 3005,
     open: true,
     hot: true, //hot reloading
     compress: true, // enable Z-zip compression
@@ -45,13 +46,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Typescript",
-      filename: "html/index.html",
+      filename: "index.html",
       template: path.resolve(__dirname, "../public/index.html"),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, "../public/manifest.json"),
+          to: path.resolve(__dirname, "../dist"),
+        },
+        {
+          from: path.resolve(__dirname, "../public/_redirects"),
           to: path.resolve(__dirname, "../dist"),
         },
       ],
