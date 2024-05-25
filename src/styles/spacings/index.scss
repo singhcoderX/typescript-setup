@@ -1,0 +1,50 @@
+$spacing-unit: 8px; // Base spacing unit
+
+@mixin generate-spacing-classes($property) {
+  @for $value from 0 through 8 {
+    $key: "";
+
+    @if $property == "margin" {
+      $key: "m";
+    } @else {
+      $key: "p";
+    }
+
+    .#{$key}-#{$value * 8} {
+      #{$property}: $value * $spacing-unit !important;
+      @if $property == "padding" {
+        box-sizing: border-box;
+      }
+    }
+    .#{$key}-r-#{$value * 8} {
+      #{$property}-right: $value * $spacing-unit !important;
+      @if $property == "padding" {
+        box-sizing: border-box;
+      }
+    }
+
+    .#{$key}-l-#{$value * 8} {
+      #{$property}-left: $value * $spacing-unit !important;
+      @if $property == "padding" {
+        box-sizing: border-box;
+      }
+    }
+
+    .#{$key}-t-#{$value * 8} {
+      #{$property}-top: $value * $spacing-unit !important;
+      @if $property == "padding" {
+        box-sizing: border-box;
+      }
+    }
+
+    .#{$key}-b-#{$value * 8} {
+      #{$property}-bottom: $value * $spacing-unit !important;
+      @if $property == "padding" {
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@include generate-spacing-classes("margin");
+@include generate-spacing-classes("padding");

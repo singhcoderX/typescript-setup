@@ -9,7 +9,7 @@ module.exports = {
     filename: "js/main[name][contenthash].js",
     clean: true,
     assetModuleFilename: "[name][ext]",
-    publicPath: "./",
+    publicPath: "/",
   },
   devtool: "source-map", // helps to debug in chrome in sources tab
   devServer: {

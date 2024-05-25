@@ -1,0 +1,35 @@
+@use "sass:math";
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage(math.div($i, 12));
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.text-center {
+  text-align: center;
+}

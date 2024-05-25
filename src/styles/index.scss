@@ -1,11 +1,14 @@
-img {
-  border: 5px;
-}
+@import "../components/Home/styles/index.scss";
 
-.container {
-  background: #baff39;
-}
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import "./layout/index.scss";
+@import "./constants/index.scss";
+@import "./spacings/index.scss";
 
 body {
-  background: #6e6e6e;
+  margin: 0;
+}
+.container {
+  background-color: aquamarine;
 }

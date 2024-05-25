@@ -1,12 +1,22 @@
 type Props = {};
 
-import reactImage from "./assets/react.png";
+import { useNavigate } from "react-router-dom";
 
 const App = (props: Props) => {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
-      <img src={reactImage} alt="React Logo" height={200} width={300} />
-      Hello TypesScript Webpack Starter Template
+      <br />
+      Hello World
+      <br />
+      <button
+        onClick={() => {
+          navigate("/home");
+        }}
+      >
+        Click Here to GO to HOME page
+      </button>
     </div>
   );
 };
