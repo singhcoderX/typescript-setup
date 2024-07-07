@@ -6,7 +6,7 @@ const App = (props: Props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="h-screen w-screen bg-purple-50">
       <br />
       Hello World
       <br />

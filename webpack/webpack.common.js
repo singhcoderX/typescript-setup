@@ -16,7 +16,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "../dist"),
     },
-    port: 3005,
+    port: 3000,
     open: true,
     hot: true, //hot reloading
     compress: true, // enable Z-zip compression

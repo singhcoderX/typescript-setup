@@ -1,14 +1,7 @@
-@import "../components/Home/styles/index.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-
-@import "./layout/index.scss";
-@import "./constants/index.scss";
-@import "./spacings/index.scss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
   margin: 0;
-}
-.container {
-  background-color: aquamarine;
 }
