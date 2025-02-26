@@ -1,6 +1,6 @@
-console.log("hello");
+console.log('hello')
 
-alert("hellp");
-let x = document.getElementById("root");
+alert('hellp')
+let x = document.getElementById('root')
 
-x.innerHTML = "Hellp Wopels";
+x.innerHTML = 'Hellp Wopels'

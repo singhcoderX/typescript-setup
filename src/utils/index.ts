@@ -1,15 +1,11 @@
 export const isNull = (value: any): boolean => {
-  return value === null;
-};
+	return value === null
+}
 
 export const isUndefined = (value: any): boolean => {
-  return value === undefined;
-};
+	return value === undefined
+}
 
 export const isEmptyObject = (value: any): boolean => {
-  return (
-    isUndefined(value) ||
-    isNull(value) ||
-    (typeof value === "object" && Object.keys(value).length === 0)
-  );
-};
+	return isUndefined(value) || isNull(value) || (typeof value === 'object' && Object.keys(value).length === 0)
+}
