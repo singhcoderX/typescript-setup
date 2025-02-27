@@ -12,3 +12,5 @@ const EventEmitter = {
 		if (this._events[event]) this._events[event] = []
 	}
 }
+
+export default EventEmitter
